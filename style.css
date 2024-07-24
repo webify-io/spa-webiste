@@ -724,14 +724,15 @@ body {
 	margin-top: 1rem;
 }
 .contact-data-social i {
-	color: var(--first-color);
+	color: var(--black-color);
 	font-size: 2rem;
 	padding: 0.125rem;
-	transition: all 0.2s ease-in-out;
+	transition: all 0.1s ease-in;
 }
 .contact-data-social i:hover {
 	transform: scale(1.1);
-	color: #2c3e50;
+	color: var(--first-color);
+	/* color: #2c3e50; */
 }
 .contact-data h2 {
 	font-weight: bold;
@@ -745,6 +746,12 @@ body {
 	font-weight: 400;
 	line-height: 1.5rem;
 	text-align: center;
+}
+.contact-data a {
+	color: var(--black-color);
+}
+.contact-data a:hover {
+	color: var(--first-color);
 }
 /* End Contact Section */
 
