@@ -913,8 +913,11 @@ body {
 		max-width: 420px;
 		border-bottom: 1px solid var(--first-color);
 	}
+	.footer-iconTop {
+		opacity: 0.5;
+	}
 	.footer-iconTop:hover {
-		opacity: 0.7;
+		opacity: 0.5;
 	}
 }
 @media (max-width: 415px) {
