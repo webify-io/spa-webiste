@@ -11,6 +11,9 @@
 	--white-color: #fff;
 	--black-color: #151515;
 
+	--scroll-bar-color: rgb(254, 230, 230);
+	--scroll-thumb-color: rgb(197, 191, 191);
+
 	--font-cursive: 'Great Vibes', cursive;
 	--font-body: 'Montserrat', sans-serif;
 
@@ -157,10 +160,14 @@ body {
 .nav-link:hover::before {
 	width: 100%;
 }
-.nav-link:hover,
-.nav-link.active {
+/* ========= Active Link ========= */
+.active-link {
 	color: var(--first-color);
 }
+/* .nav-link:hover,
+.nav-link.active {
+	color: var(--first-color);
+} */
 .nav-toggle {
 	font-size: var(--h2-font-size);
 	padding: 2px 6px;
@@ -169,10 +176,10 @@ body {
 	z-index: 100;
 	display: none;
 }
-.nav-toggle:hover {
+/* .nav-toggle:hover {
 	color: var(--first-color);
 	border: 6px solid var(--first-color);
-}
+} */
 
 /* Start: Home Section CSS */
 
@@ -778,16 +785,13 @@ body {
 	color: #30c5ff;
 }
 
-.footer-iconTop {
+/* .footer-iconTop {
 	position: fixed;
-	/* bottom: 2%;
-	right: 2%; */
 	bottom: -100px;
 	right: 50px;
 	visibility: hidden;
 
 	opacity: 0.7;
-	/* transition: visibility 0s, bottom 0.3s ease; */
 }
 
 .footer-iconTop.active {
@@ -809,9 +813,53 @@ body {
 
 .footer-iconTop:hover {
 	opacity: 1;
-}
+} */
 
 /* End Footer Section */
+
+/* ========== SCROLL UP ========== */
+.scroll-up {
+	position: fixed;
+	right: 1rem;
+	bottom: -20%;
+	background-color: var(--first-color);
+	opacity: 0.4;
+	padding: 0.8rem 1rem;
+	border-radius: 45%;
+	z-index: 10;
+	transition: 0.3s;
+}
+
+.scroll-up:hover {
+	/* background-color: var(--first-color-alt); */
+	opacity: 0.8;
+}
+
+.scrollup_icon {
+	font-size: 1rem;
+	color: #fff;
+}
+
+/* Show scroll */
+.show-scroll {
+	bottom: 5rem;
+}
+
+/* ========= SCROLL BAR ========== */
+::-webkit-scrollbar {
+	width: 0.6rem;
+	background-color: var(--scroll-bar-color);
+	border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--scroll-thumb-color);
+	border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--text-color-light);
+}
 
 @media (max-width: 920px) {
 	.logo img {
@@ -834,7 +882,8 @@ body {
 
 		display: inline-block;
 	}
-	.show-nav {
+	/* ========== Show Menu ========== */
+	.show-menu {
 		width: 60%;
 	}
 	.nav-menu a {
@@ -889,12 +938,12 @@ body {
 		max-width: 620px;
 		border-bottom: 1px solid var(--first-color);
 	}
-	.footer-iconTop {
+	/* 	.footer-iconTop {
 		right: 10px;
 	}
 	.footer-iconTop.active {
 		bottom: 30px;
-	}
+	} */
 }
 @media (max-width: 560px) {
 	.logo img {
@@ -920,9 +969,9 @@ body {
 		max-width: 420px;
 		border-bottom: 1px solid var(--first-color);
 	}
-	.footer-iconTop:hover {
+	/* 	.footer-iconTop:hover {
 		opacity: 0.7;
-	}
+	} */
 }
 @media (max-width: 415px) {
 	.contact-list {
