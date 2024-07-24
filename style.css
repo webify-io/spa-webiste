@@ -701,7 +701,7 @@ body {
 }
 /* End Testimonials Section */
 
-/* Start Footer Section */
+/* Start Contact Section */
 .contact-list {
 	width: 100%;
 	max-width: 1200px;
@@ -722,7 +722,7 @@ body {
 }
 .contact-data-social i {
 	color: var(--first-color);
-	font-size: var(--h2-font-size);
+	font-size: 1.6rem;
 	padding: 0.125rem;
 	transition: all 0.2s ease-in-out;
 }
@@ -743,6 +743,9 @@ body {
 	line-height: 1.5rem;
 	text-align: center;
 }
+/* End Contact Section */
+
+/* Start Footer Section */
 .footer .credit {
 	text-align: center;
 	padding: 1rem 0;
