@@ -887,6 +887,9 @@ body {
 	.logo img {
 		width: 8rem;
 	}
+	.home .home-content {
+		padding: 0 2rem;
+	}
 	.services-content-description {
 		grid-template-columns: unset;
 	}
