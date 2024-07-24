@@ -717,6 +717,9 @@ body {
 	text-align: center;
 	margin-bottom: 1rem;
 }
+.contact-data img {
+	width: 9rem;
+}
 .contact-data-social {
 	margin-top: 1rem;
 }
