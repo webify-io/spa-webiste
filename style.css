@@ -891,7 +891,7 @@ body {
 		width: 8rem;
 	}
 	.home .home-content {
-		padding: 0 2rem;
+		padding: 0 1rem;
 	}
 	.services-content-description {
 		grid-template-columns: unset;
