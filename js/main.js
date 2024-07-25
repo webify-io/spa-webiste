@@ -58,7 +58,7 @@ function colorLink() {
 }
 linkColor.forEach((L) => L.addEventListener('click', colorLink)); */
 
-// Change Active Link Color:
+/* ================== CHANGE ACTIVE LINK COLOR ==================== */
 const linkColor = document.querySelectorAll('.nav-link');
 
 function colorLink() {
@@ -70,32 +70,43 @@ function colorLink() {
 linkColor.forEach((L) => L.addEventListener('click', colorLink));
 
 /* ================= SCROLL SECTIONS ACTIVE LINK =================== */
+document.addEventListener('DOMContentLoaded', function () {
+	const sections = document.querySelectorAll('section'); // Get all sections
+	const navLinks = document.querySelectorAll('.nav-link'); // Get all navigation links
 
-// scroll sections
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+	// Function to update active link based on scroll position
+	function updateActiveLink() {
+		const currentScroll = window.scrollY;
 
-window.onscroll = () => {
-	sections.forEach((sec) => {
-		let top = window.scrollY;
-		let offset = sec.offsetTop - 100;
-		let height = sec.offsetHeight;
-		let id = sec.getAttribute('id');
+		sections.forEach((section) => {
+			const sectionTop = section.offsetTop - 560;
+			const sectionHeight = section.offsetHeight;
+			const sectionId = section.getAttribute('id');
 
-		if (top >= offset && top < offset + height) {
-			//active navbar links
-			navLinks.forEach((links) => {
-				links.classList.remove('active-link');
-				document
-					.querySelector('header nav a[href*=' + id + ']')
-					.classList.add('active-link');
-			});
+			if (
+				currentScroll >= sectionTop &&
+				currentScroll < sectionTop + sectionHeight
+			) {
+				// Remove active class from all links
+				navLinks.forEach((link) => {
+					link.classList.remove('active-link');
+				});
 
-			// active sections for animation on scroll
-		}
-		// if want to use animation that repeats on scroll use this
-	});
-};
+				// Add active class to the corresponding link
+				const activeLink = document.querySelector(
+					`.nav-link[href="#${sectionId}"]`
+				);
+				if (activeLink) {
+					activeLink.classList.add('active-link');
+				}
+			}
+		});
+	}
+
+	// Call the function on initial load and scroll
+	updateActiveLink();
+	window.addEventListener('scroll', updateActiveLink);
+});
 
 // Change header background when scrolling down
 function scrollHeader() {
